@@ -1,5 +1,30 @@
 # React + TypeScript + Vite
 
+Hi dear Zarban developers
+// //
+
+file and folder structure 
+
+for file and folder structure i decide to use atomic design
+-  reusability of components
+- consistency in the ui 
+- better and simpler possible improvements in the project
+- understand the project for new developer (in the future)
+
+// //
+
+
+
+
+
+
+
+
+
+
+
+
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
