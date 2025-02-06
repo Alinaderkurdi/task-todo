@@ -1,11 +1,15 @@
 
 
-
+import Header from "./header/header";
+import TodoWrapper from "./todos-section/todos-wrapper";
 
 const TodosView = ()=> {
 
   return(
-    <div>todo view</div>
+    <div>
+      <Header />
+      <TodoWrapper />
+    </div>
   )
 }
 

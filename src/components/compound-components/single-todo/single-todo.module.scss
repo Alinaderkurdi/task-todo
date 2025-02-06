@@ -1,0 +1,61 @@
+
+
+.single-todo {
+    overflow: hidden;
+    padding: 0 0.200rem 0 0.200rem;
+    position: relative;
+    height: 5.3rem;
+    border: 0.063rem grey solid;
+    margin-top: 0.438rem; 
+    border-radius: 0.625rem;
+    -webkit-box-shadow: 1px 19px 34px -43px rgba(0,0,0,0.5);
+    -moz-box-shadow: 1px 19px 34px -43px rgba(0,0,0,0.5);
+    box-shadow: 1px 19px 34px -43px rgba(0,0,0,0.5);
+
+    .info-box {
+        padding: 0.313rem;
+        //border: 1px yellow solid;
+        margin-top: 0.400rem;
+        display: flex;
+        align-items: center;
+
+
+        .todo-title {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 1;
+            line-clamp: 1;
+            overflow: hidden;
+            font-weight: 400;
+            font-size: 1.3rem;
+            margin-left: 0.700rem;
+        }
+
+        .todo-completed {
+            opacity: 0.7;
+            text-decoration: line-through;
+        }
+
+        .hour{
+            position: absolute;
+            right: 5px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 0.860rem;
+        }
+    }
+
+    .description {
+        font-size: 0.900rem;
+        padding-left: 2.8rem;
+        padding-right: 2rem;
+    }
+
+    .toggel-to-show-more {
+        position: absolute;
+        bottom:-10%;
+        left: 50%;
+        
+        transform: translate(-50%, -50%)
+    }
+}
