@@ -7,53 +7,73 @@ const TodoWrapper = ()=> {
         <div className={style['todo-wrapper']}>
             <SingleTodo
              id={21} 
-             completed={false}
+             testID={'a1'}
+             key={'a1'}
+             completed={true}
              title={'helloooo oooo hi and this is so good '}
             />
             <SingleTodo
+             testID={'a2'}
+             key={'a2'}
              id={21} 
              completed={true}
              title={'this is the last'}
             />
             <SingleTodo
+             testID={'as2'}
+             key={'as2'}
              id={21} 
              completed={false}
-             title={'hello'}
+             title={'hi'}
             />
             <SingleTodo
+             testID={'acx23'}
+             key={'acx23'}
              id={21} 
              completed={false}
-             title={'hello'}
+             title={'what app'}
             />
             <SingleTodo
+             testID={'a123ed'}
+             key={'a123ed'}
              id={21} 
              completed={true}
-             title={'hello'}
+             title={'oh no '}
             />
             <SingleTodo
+             testID={'aqw123321'}
+             key={'aqw123321'}
              id={21} 
              completed={false}
-             title={'hello'}
+             title={'this the test'}
             />
             <SingleTodo
+             testID={'aqcfgt56'}
+             key={'aqcfgt56'}
              id={21} 
              completed={true}
-             title={'hello'}
+             title={'come on babe !'}
             />
             <SingleTodo
+             testID={'12qxgtgt'}
+             key={'12qxgtgt'}
              id={21} 
              completed={false}
-             title={'hello'}
+             title={'ohhhh god '}
             />
             <SingleTodo
+             testID={'12axnmklo['}
+             key={'12axnmklo['}
              id={21} 
              completed={false}
-             title={'hello'}
+             title={'hiiiiiiii'}
             />
             <SingleTodo
+             testID={'23rtebhj'}
+             key={'23rtebhj'}
              id={21} 
              completed={false}
-             title={'hello'}
+             title={'ali naderkurdi'}
             />
         </div>
     )

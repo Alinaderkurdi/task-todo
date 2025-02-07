@@ -1,4 +1,4 @@
-
+@use '../../../global-scss/color-palette/main-colors' as var;
 
 .single-todo {
     overflow: hidden;
@@ -37,6 +37,13 @@
         }
 
         .hour{
+            //border: 1px red solid;
+            -webkit-box-shadow: 1px 19px 34px -43px rgba(0,0,0,0.5);
+            -moz-box-shadow: 1px 19px 34px -43px rgba(0,0,0,0.5);
+            box-shadow: 1px 19px 34px -43px rgba(0,0,0,0.5);        
+            padding: 2px;
+            background-color: var.$dark_bg;
+            border-radius: 0.500rem;
             position: absolute;
             right: 5px;
             top: 50%;
@@ -46,6 +53,7 @@
     }
 
     .description {
+       // border: 1px red solid;
         font-size: 0.900rem;
         padding-left: 2.8rem;
         padding-right: 2rem;

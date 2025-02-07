@@ -1,0 +1,33 @@
+
+.floated-bt {
+    position: absolute;
+    top: 62%;
+    transform: translateY(-50%)
+}
+
+.module-wrapper {
+    
+    height: 5.3rem;
+    display: flex;
+    align-items: end;
+    position: relative;
+    padding: 0 0.200rem  0.100rem 0.200rem;
+
+    .function-bt-add {
+        background-color: aqua;
+        @extend .floated-bt;
+        right: 5px;
+    }
+
+    .function-bt-search {
+        background-color: brown;
+        right: 60px;
+        @extend .floated-bt;
+    }
+
+    .function-bt {
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+    }
+}

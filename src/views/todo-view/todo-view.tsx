@@ -2,6 +2,7 @@
 
 import Header from "./header/header";
 import TodoWrapper from "./todos-section/todos-wrapper";
+import InputSection from "./add-and-search/inputSection";
 
 const TodosView = ()=> {
 
@@ -9,6 +10,7 @@ const TodosView = ()=> {
     <div>
       <Header />
       <TodoWrapper />
+      <InputSection />
     </div>
   )
 }

@@ -16,11 +16,12 @@ type singleTodo = {
     description?: string
     completed: boolean
     time?: string
+    testID: string
 
 }
 
 const SingleTodo = (props: singleTodo)=> {
-    const { id,title ,completed} = props 
+    const { id,title ,completed, testID} = props 
     
 
     const [toggelDescription, setToggelDescription] = useState(false)
@@ -29,10 +30,17 @@ const SingleTodo = (props: singleTodo)=> {
     const toggelDescriptionState = () => {
         setToggelDescription( prev => !prev)
     }
+
+    const getTheCheckBoxState = (state: boolean)=> {
+        console.log('getTheCheckBoxState ==> '+ state)
+        setIsCompleted(state)
+    }
+
+
     return(
         <div className={style['single-todo']}>
             <div className={style['info-box']}>
-                <CheckBoxButton defaultChecked={completed}/>
+                <CheckBoxButton defaultChecked={completed} id={id} testID={testID} onCheckBoxIsClicked={getTheCheckBoxState}/>
                 <h2 className={`${style['todo-title']} ${ isCompleted ? style['todo-completed'] : ''}`} >{title}</h2>
                 <p className={style['hour']}>21:10</p>
             </div>
