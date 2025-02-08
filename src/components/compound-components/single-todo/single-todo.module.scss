@@ -1,4 +1,15 @@
 @use '../../../global-scss/color-palette/main-colors' as var;
+@use '../../../global-scss/color-palette/secondery-colors' as sec_var;
+
+
+.element-wrapper {
+    -webkit-box-shadow: 1px 19px 34px -43px rgba(0,0,0,0.5);
+    -moz-box-shadow: 1px 19px 34px -43px rgba(0,0,0,0.5);
+    box-shadow: 1px 19px 34px -43px rgba(0,0,0,0.5);
+    background-color: var.$secondery_light;
+    border-radius: 0.500rem;
+}
+
 
 .single-todo {
     overflow: hidden;
@@ -14,7 +25,6 @@
 
     .info-box {
         padding: 0.313rem;
-        //border: 1px yellow solid;
         margin-top: 0.400rem;
         display: flex;
         align-items: center;
@@ -37,13 +47,8 @@
         }
 
         .hour{
-            //border: 1px red solid;
-            -webkit-box-shadow: 1px 19px 34px -43px rgba(0,0,0,0.5);
-            -moz-box-shadow: 1px 19px 34px -43px rgba(0,0,0,0.5);
-            box-shadow: 1px 19px 34px -43px rgba(0,0,0,0.5);        
-            padding: 2px;
-            background-color: var.$dark_bg;
-            border-radius: 0.500rem;
+            @extend .element-wrapper;
+            padding: 4px;
             position: absolute;
             right: 5px;
             top: 50%;
@@ -60,10 +65,12 @@
     }
 
     .toggel-to-show-more {
+        @extend .element-wrapper;
+        color: sec_var.$icon_color_secondery_light;
         position: absolute;
+        padding: 3px;
         bottom:-10%;
         left: 50%;
-        
         transform: translate(-50%, -50%)
     }
 }

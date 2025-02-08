@@ -1,11 +1,10 @@
-
+@use '../../../global-scss/color-palette/main-colors' as var;
 
 .input-main {
     width: 100%;
     background: none;
     outline: none;
     height: 4rem;
-    border: none;
-    border: 1px blue solid;
+    border: 1px  var.$border_color_main solid;
     border-radius:0.625rem;
 }

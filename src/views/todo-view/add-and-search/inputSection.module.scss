@@ -1,11 +1,12 @@
 @use '../../../global-scss/color-palette/main-colors' as var;
 
 .input-section-main {
-    overflow:hidden;
+
+    overflow: hidden;
     border-radius: 0.625rem;
     position: sticky;
     width: 99%;
     margin: 0 auto;
-    bottom: 0.500rem;
-    background-color: var.$light_bg;
+    bottom: 0.200rem;
+    background-color: var.$secondery_light
 }
