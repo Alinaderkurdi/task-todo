@@ -6,12 +6,12 @@ type checkBox = {
   defaultChecked?: boolean
   id: number
   onCheckBoxIsClicked?: (state: boolean)=> void
-  testID: string
+  ID: string
 }
 
 const CheckBoxButton = (props:checkBox)=> {
 
-  const { defaultChecked, onCheckBoxIsClicked, testID } = props
+  const { defaultChecked, onCheckBoxIsClicked, ID } = props
   const [ isCompleted, setIsCompleted ] = useState(defaultChecked)
 
   const ClikedCheckBox = (e:React.MouseEvent<HTMLInputElement>)=> {
@@ -22,15 +22,15 @@ const CheckBoxButton = (props:checkBox)=> {
 
 
   useEffect(()=>{
-    console.log(isCompleted + 'useEffect')
+    //console.log(isCompleted + 'useEffect')
   },[isCompleted])
   
 
   return(
     <div className={style["checkbox-wrapper-18"]}>
       <div className={style["round"]}>
-        <input className={style['check-box']} type="checkbox" defaultChecked={isCompleted} id={testID} onClick={ClikedCheckBox}/>
-        <label htmlFor={testID}></label>
+        <input className={style['check-box']} type="checkbox" defaultChecked={isCompleted} id={ID} onClick={ClikedCheckBox}/>
+        <label htmlFor={ID}></label>
       </div>
     </div>
   )
