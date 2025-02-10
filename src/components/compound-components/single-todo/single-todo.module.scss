@@ -19,9 +19,10 @@
     border: 0.063rem grey solid;
     margin-top: 0.438rem; 
     border-radius: 0.625rem;
-    -webkit-box-shadow: 1px 19px 34px -43px rgba(0,0,0,0.5);
-    -moz-box-shadow: 1px 19px 34px -43px rgba(0,0,0,0.5);
-    box-shadow: 1px 19px 34px -43px rgba(0,0,0,0.5);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    //-webkit-box-shadow: 1px 19px 34px -43px rgba(0,0,0,0.5);
+    //-moz-box-shadow: 1px 19px 34px -43px rgba(0,0,0,0.5);
+    //box-shadow: 1px 19px 34px -43px rgba(0,0,0,0.5);
 
     .info-box {
         padding: 0.313rem;

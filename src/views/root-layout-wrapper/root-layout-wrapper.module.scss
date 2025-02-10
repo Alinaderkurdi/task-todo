@@ -1,7 +1,9 @@
 
 
 .root-layout {
-    border: 1px red solid;
+    //border: 1px red solid;
+    display: flex;
+    flex-direction: column;
     min-height: 100vh;
     max-width: 600px;
 }
