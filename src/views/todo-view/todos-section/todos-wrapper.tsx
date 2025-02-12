@@ -32,7 +32,7 @@ const TodoWrapper = (props:todoWrapper)=> {
 
     useEffect(()=> {
        setLoadingState(true)
-       fetch("https://jsonplaceholder.typicode.com/todos")
+       fetch("https://jsonplaceholder.typicode.com/todo")
        .then((response) => {
            if(!response.ok){
             throw new Error(`Error! Status: ${response.status}`);
@@ -110,7 +110,7 @@ const TodoWrapper = (props:todoWrapper)=> {
                 renderTodos()
             }
             {
-                loadingState  &&  <LoadingSpinner spinnerSize={style['spinner-size']} appendStyle={style['test']}/>
+                loadingState  &&  <LoadingSpinner spinnerSize={style['spinner-size']} appendStyle={style['loading-wrapper']}/>
             }
         </div>
     )

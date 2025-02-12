@@ -1,4 +1,5 @@
-@use '../../../global-scss/color-palette/main-colors' as var;
+@use '../../../global-scss/color-palette/main-colors/main-colors' as var;
+@use '../../../global-scss/color-palette/error-boundery-color/error-boundery-color-palette' as  boundery;
 
 
 .fall-back {
@@ -6,13 +7,13 @@
     border-radius: 0.625rem;
     width: 90%;
     height: 12.25rem;
-    border: 1px #EE2400 solid;
-    background-color: #FBD9D3;
+    border: 1px  boundery.$boundery_border solid;
+    background-color: boundery.$slightly_red;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: #EE2400;
+    color:  boundery.$text_color;
 
     p {
         padding: 0.500rem;
@@ -30,7 +31,3 @@
         font-size: 1rem;
     }
 }
-
-
-
-//slightly-rounded

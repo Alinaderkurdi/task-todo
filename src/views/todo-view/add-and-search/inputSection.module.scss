@@ -1,5 +1,6 @@
-@use '../../../global-scss/color-palette/main-colors' as var;
-@use '../../../global-scss/color-palette/secondery-colors' as sec_var;
+@use '../../../global-scss/color-palette/main-colors/main-colors' as var;
+@use '../../../global-scss/color-palette/secondery/secondery-colors' as sec_var;
+
 
 .floated-bt {
     color: sec_var.$icon_color_secondery_light;
