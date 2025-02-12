@@ -1,0 +1,36 @@
+@use '../../../global-scss/color-palette/main-colors' as var;
+
+
+.fall-back {
+    margin: 3rem auto 0 auto;
+    border-radius: 0.625rem;
+    width: 90%;
+    height: 12.25rem;
+    border: 1px #EE2400 solid;
+    background-color: #FBD9D3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #EE2400;
+
+    p {
+        padding: 0.500rem;
+        font-size: 1rem;
+    }
+
+
+    .rest-button{
+        border-radius: 0.625rem;
+        padding: 1rem;
+        margin-top: 0.200rem;
+        background-color: var.$main_green;
+        border: 1px var.$border_color_main solid;
+        font-weight: 600;
+        font-size: 1rem;
+    }
+}
+
+
+
+//slightly-rounded

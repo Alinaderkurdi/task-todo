@@ -1,0 +1,74 @@
+@use '../../../global-scss/color-palette/main-colors' as var;
+@use '../../../global-scss/color-palette/secondery-colors' as sec_var;
+
+
+.element-wrapper {
+    -webkit-box-shadow: 1px 19px 34px -43px rgba(0,0,0,0.5);
+    -moz-box-shadow: 1px 19px 34px -43px rgba(0,0,0,0.5);
+    box-shadow: 1px 19px 34px -43px rgba(0,0,0,0.5);
+    background-color: var.$secondery_light;
+    border-radius: 0.500rem;
+}
+
+
+.single-todo {
+    overflow: hidden;
+    padding: 0 0.200rem 0 0.200rem;
+    position: relative;
+    height: 5.3rem;
+    border: 0.063rem grey solid;
+    margin-top: 0.438rem; 
+    border-radius: 0.625rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+
+    .info-box {
+        padding: 0.313rem;
+        margin-top: 0.400rem;
+        display: flex;
+        align-items: center;
+
+
+        .todo-title {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 1;
+            line-clamp: 1;
+            overflow: hidden;
+            font-weight: 400;
+            font-size: 1.3rem;
+            margin-left: 0.700rem;
+        }
+
+        .todo-completed {
+            opacity: 0.7;
+            text-decoration: line-through;
+        }
+
+        .hour{
+            @extend .element-wrapper;
+            padding: 4px;
+            position: absolute;
+            right: 5px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 0.860rem;
+        }
+    }
+
+    .description {
+       // border: 1px red solid;
+        font-size: 0.900rem;
+        padding-left: 2.8rem;
+        padding-right: 2rem;
+    }
+
+    .toggel-to-show-more {
+        @extend .element-wrapper;
+        color: sec_var.$icon_color_secondery_light;
+        position: absolute;
+        padding: 3px;
+        bottom:-10%;
+        left: 50%;
+        transform: translate(-50%, -50%)
+    }
+}

@@ -1,0 +1,45 @@
+@use '../../../global-scss/color-palette/main-colors' as var;
+@use '../../../global-scss/color-palette/secondery-colors' as sec_var;
+
+.floated-bt {
+    color: sec_var.$icon_color_secondery_light;
+    position: absolute;
+    top: 51%;
+    transform: translateY(-50%);
+    box-shadow: -1px 4px 14px -6px rgba(0,0,0,0.75);
+   -webkit-box-shadow: -1px 4px 14px -6px rgba(0,0,0,0.75);
+   -moz-box-shadow: -1px 4px 14px -6px rgba(0,0,0,0.75);
+}
+
+
+.input-section-main {
+    overflow: hidden;
+    border-top-left-radius: 0.625rem;
+    border-top-right-radius: 0.625rem;
+    position: sticky;
+    width: 99%;
+    height: 4.7rem;
+    display: flex;
+    align-items: center;
+    margin: auto auto 0 auto ;
+    bottom: 0px;
+    background-color: var.$secondery_light;
+    padding: 0 0.300rem  0.100rem 0.300rem;
+
+
+    .function-bt-add {
+        @extend .floated-bt;
+        right: 10px;
+    }
+
+    .function-bt-search {
+        right: 70px;
+        @extend .floated-bt;
+    }
+
+    .function-bt {
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+    }
+}

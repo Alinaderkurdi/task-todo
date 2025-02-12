@@ -1,0 +1,19 @@
+@use '../../../global-scss/color-palette/main-colors' as var;
+
+
+.header-main {
+    z-index: 10;
+    //border: 1px red solid;
+    background-color: var.$main_green;
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    padding: 0 0.6rem;
+    top: 0;
+
+.app-name{
+    color: #ffff;
+  }
+}
