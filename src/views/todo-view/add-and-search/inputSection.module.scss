@@ -3,13 +3,10 @@
 
 
 .floated-bt {
-    color: sec_var.$icon_color_secondery_light;
+    color: sec_var.$icon_color_main;
     position: absolute;
     top: 51%;
     transform: translateY(-50%);
-    box-shadow: -1px 4px 14px -6px rgba(0,0,0,0.75);
-   -webkit-box-shadow: -1px 4px 14px -6px rgba(0,0,0,0.75);
-   -moz-box-shadow: -1px 4px 14px -6px rgba(0,0,0,0.75);
 }
 
 
@@ -31,11 +28,13 @@
     .function-bt-add {
         @extend .floated-bt;
         right: 10px;
+        background-color:  sec_var.$intle_bule;
     }
 
     .function-bt-search {
         right: 70px;
         @extend .floated-bt;
+        background-color: sec_var.$secondery_green;
     }
 
     .function-bt {

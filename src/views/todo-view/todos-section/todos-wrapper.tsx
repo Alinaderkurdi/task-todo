@@ -25,11 +25,6 @@ const TodoWrapper = (props:todoWrapper)=> {
     const { showBoundary } = useErrorBoundary();
 
 
-   useEffect(()=>{
-       console.log('CHANGE BY INPUT STATUES! ' + statues?.inputValue, statues.operation)
-   }, [statues.inputValue,statues.operation])
-
-
     useEffect(()=> {
        setLoadingState(true)
        fetch("https://jsonplaceholder.typicode.com/todos")
@@ -50,14 +45,13 @@ const TodoWrapper = (props:todoWrapper)=> {
        .finally(()=>{
         setLoadingState(false)
        })
-    },[])
-    //to get updated data from API when new todo added this effect get asyncResult from the input section
+    },[])//to get updated data from API when new todo added this effect get asyncResult from the input section
+    
 
     const cachedtodos = useMemo(()=>{
-
+    
         if(!loadingState && todos.length > 0){
           return todos.map((todo: todoShape)=> {
-            console.log('render')
             return(
                 <SingleTodo
                    key={todo.id.toString()}
@@ -71,47 +65,37 @@ const TodoWrapper = (props:todoWrapper)=> {
         }
     },[todos])
 
+
     const filteredTodos = useMemo(()=>{
-
-
-        const filteredItems = todos.filter((currentTodo: todoShape)=> {
-            return currentTodo.title.toLowerCase().includes(statues.query?.toLowerCase())
-        })
-        return filteredItems.map((todo: todoShape)=>{
-            return(
-                <SingleTodo
-                   key={todo.id.toString()}
-                   completed={todo.completed}
-                   id={todo.id}
-                   title={todo.title}
-                   ID={todo.id.toString()}
-                />
-            )
-        })
+        if('query' in statues && statues.query){//this part use the type non-null assertion for safty check the statues.query 
+            const filteredItems = todos.filter((currentTodo: todoShape)=> {
+                return currentTodo.title.toLowerCase().includes(statues.query!.toLowerCase())
+            })
+            return filteredItems.map((todo: todoShape)=>{
+                return(
+                    <SingleTodo
+                       key={todo.id.toString()}
+                       completed={todo.completed}
+                       id={todo.id}
+                       title={todo.title}
+                       ID={todo.id.toString()}
+                    />
+                )
+            })
+        }
     },[statues.query])
 
-    const renderTodos = ()=> {
-        console.log('rendertodo')
-        if(filteredTodos.length > 0 && statues.query) {
-            return filteredTodos
-        }else {
-            cachedtodos
-        }
-        
-    }
-
+  //  console.log(cachedtodos)
 
     return(
         <div className={style['todo-wrapper']}>
             {
-               // !loadingState && todos?.length > 0 && data
-                /// if search result.lenght search result  > 0 else  cachedtodos
-                //filteredTodos
-                renderTodos()
+                cachedtodos
             }
             {
                 loadingState  &&  <LoadingSpinner spinnerSize={style['spinner-size']} appendStyle={style['loading-wrapper']}/>
             }
+           
         </div>
     )
 }
