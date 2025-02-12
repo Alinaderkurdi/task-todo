@@ -4,7 +4,7 @@
 .floated-bt {
     color: sec_var.$icon_color_secondery_light;
     position: absolute;
-    top: 62%;
+    top: 57%;
     transform: translateY(-50%);
     box-shadow: -1px 4px 14px -6px rgba(0,0,0,0.75);
    -webkit-box-shadow: -1px 4px 14px -6px rgba(0,0,0,0.75);
@@ -12,7 +12,8 @@
 }
 
 .module-wrapper {
-    height: 5.3rem;
+  //  border: 1px red solid;
+    height: 4.7rem;
     display: flex;
     align-items: end;
     position: relative;

@@ -1,10 +1,30 @@
 @use '../../../global-scss/color-palette/main-colors' as var;
 
+$text_padding: 0.200rem;
+
 .input-main {
     width: 100%;
     background: none;
     outline: none;
-    height: 4rem;
+    //border:none;
+    height: 3.900rem;
     border: 1px  var.$border_color_main solid;
     border-radius:0.625rem;
+    font-size: 1.5rem;
+    color: rgb(0, 0, 0);
+    padding-left: $text_padding;
+    
+    &::placeholder {
+        font-size: 1.2rem;
+        color:inherit;
+        padding-left: $text_padding;
+    }
+
+   //&:focus {
+   //    border: 1px  var.$border_color_main solid;
+   //}
+
+   //&:hover {
+   //    border: 1px  var.$border_color_main solid;
+   //}
 }
