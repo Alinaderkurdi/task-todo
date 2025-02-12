@@ -85,8 +85,7 @@ const TodoWrapper = (props:todoWrapper)=> {
         }
     },[statues.query])
 
-  //  console.log(cachedtodos)
-
+    
     return(
         <div className={style['todo-wrapper']}>
             {
