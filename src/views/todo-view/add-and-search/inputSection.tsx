@@ -22,8 +22,10 @@ const InputSection = ({ onGetInputStatus}: inputsection)=> {
 
   const [inputAction, setInputAction] = useState('ADD')
   const [inputValue, setInputValue] = useState('')
+  const [detectAppBtClick,setDetectAppBtClick] = useState(false)
 
-  const debouncedValue = useDebounce(inputValue, 1000);
+
+  const debouncedValue = useDebounce(inputValue, 1100);
   
   const inputValidator = (inputValue: string)=> {
     if (inputValue.trim()){//juest a simple input validation !
@@ -38,7 +40,9 @@ const InputSection = ({ onGetInputStatus}: inputsection)=> {
   }
 
   useEffect(()=>{
-    if(inputAction === 'ADD'){
+    console.log('detectAppBtClick')
+    if(inputAction === 'ADD' && inputValue){
+      console.log('send HTTP ' + inputValue )
       // if the responce is 200 trigger the a useEffect on the todos section
       // call Api for add new todo during request/responce the todos section can be updated optimistically 
       // the result of this api call snd with onGetInputStatus()
@@ -50,7 +54,8 @@ const InputSection = ({ onGetInputStatus}: inputsection)=> {
       // 
 
     }
-  },[inputValue])
+  },[detectAppBtClick])
+  
 
 
   useEffect(()=> {
@@ -63,8 +68,9 @@ const InputSection = ({ onGetInputStatus}: inputsection)=> {
     }
   }, [debouncedValue])
 
-
   const addAction = (action:string)=>{
+    console.log('add action')
+    setDetectAppBtClick(prev => !prev)
     setInputAction(action)
   } 
 

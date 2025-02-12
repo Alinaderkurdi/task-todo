@@ -32,7 +32,6 @@ const SingleTodo = (props: singleTodo)=> {
     }
 
     const getTheCheckBoxState = (state: boolean)=> {
-        console.log('getTheCheckBoxState ==> '+ state)
         setIsCompleted(state)
     }
 

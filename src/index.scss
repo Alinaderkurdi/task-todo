@@ -3,6 +3,10 @@
   margin: 0px 0px;
 }
 
+html, body {
+  height: 100%;
+}
+
 //#F4F8F8
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -11,7 +15,7 @@
 
   color-scheme: light dark;
   color: rgba(0, 0, 0, 0.933);
-  background-color: #ffffff;
+  background-color:  #ffffff;
   
   font-synthesis: none;
   text-rendering: optimizeLegibility;

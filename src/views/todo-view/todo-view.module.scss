@@ -1,6 +1,7 @@
 
 
 .todo-view-main {
-  //  border: 1px rgb(60, 255, 0) solid;
-    min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }

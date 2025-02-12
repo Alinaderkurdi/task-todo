@@ -1,14 +1,12 @@
-@use '../../../global-scss/color-palette/main-colors' as var;
-@use '../../../global-scss/color-palette/secondery-colors' as sec_var;
+@use '../../../global-scss/color-palette/main-colors/main-colors' as var;
+@use '../../../global-scss/color-palette/secondery/secondery-colors' as sec_var;
+
 
 .floated-bt {
-    color: sec_var.$icon_color_secondery_light;
+    color: sec_var.$icon_color_main;
     position: absolute;
     top: 51%;
     transform: translateY(-50%);
-    box-shadow: -1px 4px 14px -6px rgba(0,0,0,0.75);
-   -webkit-box-shadow: -1px 4px 14px -6px rgba(0,0,0,0.75);
-   -moz-box-shadow: -1px 4px 14px -6px rgba(0,0,0,0.75);
 }
 
 
@@ -24,17 +22,19 @@
     margin: auto auto 0 auto ;
     bottom: 0px;
     background-color: var.$secondery_light;
-    padding: 0 0.300rem  0.100rem 0.300rem;
+    padding: 0 0  0.100rem 0;
 
 
     .function-bt-add {
         @extend .floated-bt;
         right: 10px;
+        background-color:  sec_var.$intle_bule;
     }
 
     .function-bt-search {
         right: 70px;
         @extend .floated-bt;
+        background-color: sec_var.$secondery_green;
     }
 
     .function-bt {
