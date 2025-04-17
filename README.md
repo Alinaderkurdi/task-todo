@@ -38,6 +38,6 @@ config/{the-cheanged-config file /or add a plug in to vite}
 
 CICD/{for add or improvement in ci cd files }
 
-reflector/{the part of app or feature should be reflector include folder strucher source code ... }
+reflactor/{the part of app or feature should be reflector include folder strucher source code ... }
 
 ........................................
