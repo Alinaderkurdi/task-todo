@@ -1,0 +1,14 @@
+
+name: lint the code
+
+on: workflow_dispatch
+
+jobs:
+    lint:
+        runs-on: ubuntu-latest
+        steps:
+
+            - name : run a test command
+              run: echo "linting the code"
+            - name : tell god bay
+              run: echo 'god bay!'
