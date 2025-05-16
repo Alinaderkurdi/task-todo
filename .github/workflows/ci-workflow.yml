@@ -7,8 +7,7 @@ jobs:
     lint:
         runs-on: ubuntu-latest
         steps:
-
-            - name : run a test command
-              run: echo "linting the code"
-            - name : tell god bay
-              run: echo 'god bay!'
+            - name : get the code
+              uses: actions/checkout@v4
+            - name : check node version
+              run: 'node -v'
